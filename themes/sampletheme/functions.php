@@ -184,6 +184,12 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Woocommerce additions.
+ */
+require get_template_directory() . '/inc/woocommerce.php';
+
+
+/**
  * Load Jetpack compatibility file.
  */
 // if ( defined( 'JETPACK__VERSION' ) ) {
@@ -220,9 +226,9 @@ require get_template_directory() . '/inc/customizer.php';
  function sampletheme_enqueue_block_assets() {
 	wp_enqueue_style(
 		'editor-style',
-		get_template_directory_uri() . '/assets/css/editor.cs'
+		get_template_directory_uri() . '/assets/css/editor.css'
 		
 	);
 }
 
- add_action( 'enqueue_block_asets','sampletheme_enqueue_block_assets');
+ add_action( 'enqueue_block_assets','sampletheme_enqueue_block_assets');
